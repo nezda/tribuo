@@ -121,6 +121,9 @@ public class TensorflowSequenceTrainer<T extends Output<T>> implements SequenceT
     /** Constructor required by olcut config system. **/
     private TensorflowSequenceTrainer() { }
 
+    /**
+     * Used by the OLCUT configuration system, and should not be called by external code.
+     */
     @Override
     public synchronized void postConfig() throws IOException {
         rng = new SplittableRandom(seed);
